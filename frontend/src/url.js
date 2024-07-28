@@ -1,1 +1,1 @@
-export const baseUrl = "https://gamifybeta-1.onrender.com";
+export const baseUrl = "https://gamify-deploy.onrender.com";

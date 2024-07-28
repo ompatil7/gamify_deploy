@@ -35,7 +35,10 @@ cloudinary.config({
 
 //middlewares
 //middleware is a function that runs betrween req and resp
-const allowedOrigins = ["http://localhost:3000", "https://gamifyv2.vercel.app"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://gamify-v2.vercel.app",
+];
 
 app.use(
   cors({
@@ -45,7 +48,7 @@ app.use(
 );
 app.set("trust proxy", 1);
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://gamifyv2.vercel.app");
+  res.header("Access-Control-Allow-Origin", "https://gamify-v2.vercel.app");
   res.header("Access-Control-Allow-Credentials", true);
 
   next();
@@ -87,5 +90,5 @@ app.use("/api/messages", messageRoutes);
 // });
 
 server.listen(PORT, () => {
-  console.log(`Server started at http://localhost:${PORT}`);
+  console.log(`Server started at https://gamify-v2.vercel.app`);
 });
