@@ -80,8 +80,10 @@ import postsAtom from "../atoms/postsAtom";
 import Post from "../components/Post";
 import SuggestedUsers from "../components/SuggestedUsers";
 import useShowToast from "../hooks/useShowToast";
-import { clearAuthData } from "../utils/clearAuthData";
+import { clearAuthData } from "../utils/clearAuthData.js";
 import { baseUrl } from "../url";
+import { clearAuthData } from "../utils/clearAuthData";
+
 function HomePage() {
   const [posts, setPosts] = useRecoilState(postsAtom);
   const [loading, setLoading] = useState(true);
