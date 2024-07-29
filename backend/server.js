@@ -65,6 +65,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 //routes
+app.use("/", "");
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/messages", messageRoutes);
