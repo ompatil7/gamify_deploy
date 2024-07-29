@@ -17,7 +17,7 @@ export const SocketContextProvider = ({ children }) => {
   useEffect(() => {
     if (!user?._id) return;
 
-    const socket = io("https://gamifybeta-1.onrender.com", {
+    const socket = io("https://gamify-deploy.onrender.com", {
       query: {
         userId: user?._id,
       },
