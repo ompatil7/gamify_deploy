@@ -38,6 +38,7 @@ cloudinary.config({
 const allowedOrigins = [
   "http://localhost:3000",
   "https://gamify-y1.vercel.app",
+  "https://gamify-deploy-v3.vercel.app",
 ];
 
 app.use(
@@ -48,7 +49,10 @@ app.use(
 );
 app.set("trust proxy", 1);
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://gamify-y1.vercel.app");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://gamify-deploy-v3.vercel.app"
+  );
   res.header("Access-Control-Allow-Credentials", true);
 
   next();
