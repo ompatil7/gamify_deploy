@@ -65,7 +65,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 //routes
-app.use("/", "");
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/messages", messageRoutes);
